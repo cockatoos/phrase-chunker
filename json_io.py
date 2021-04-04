@@ -2,8 +2,11 @@
 import os
 import spacy
 import re
+import sys
+
 from flask import Flask, render_template, request
 from database_connector import write_article_to_db
+
 app = Flask(__name__)
 app._static_folder = os.path.abspath("templates/static/")
 nlp = spacy.load("en_core_web_sm")
@@ -152,7 +155,9 @@ def consolidate_document(phrases):
 if __name__ == '__main__':
     # run!
     # app.run()
-    input_file = "nfl.txt"
+    assert len(sys.argv) == 2, "Missing artile file in CLI args!"
+
+    input_file = sys.argv[1]
     input_text = open(input_file, "r", encoding="utf-8").read()
     print(input_text)
 
