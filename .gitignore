@@ -1,0 +1,27 @@
+cockatoos-5a170-firebase-adminsdk-ty1da-3f70ecdad4.json
+.DS_Store
+.env
+.flaskenv
+*.pyc
+*.pyo
+env/
+env*
+dist/
+build/
+*.egg
+*.egg-info/
+_mailinglist
+.tox/
+.cache/
+.pytest_cache/
+.idea/
+docs/_build/
+.vscode
+/node_modules
+/venv
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+*,cover
